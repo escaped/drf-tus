@@ -8,5 +8,5 @@ router = TusAPIRouter()
 router.register(r'files', UploadViewSet, base_name='upload')
 
 urlpatterns = [
-    url(r'', include(router.urls, namespace='api'))
+    url(r'', include((router.urls, 'rest_framework_tus'), namespace='api'))
 ]
