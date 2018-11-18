@@ -51,7 +51,7 @@ Add drf-tus's URL patterns:
 
     urlpatterns = [
         ...
-        url(r'^', include('rest_framework_tus.urls', namespace='rest_framework_tus')),
+        path(r'^', include('rest_framework_tus.urls')),
         ...
     ]
 
