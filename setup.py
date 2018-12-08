@@ -62,6 +62,7 @@ setup(
         'jsonfield>=2.0.0',
         'django-fsm==2.6.0',
         'six>=1.11.0',
+        'python-dateutil',
     ],
     license="MIT",
     zip_safe=False,
