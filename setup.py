@@ -59,7 +59,7 @@ setup(
     install_requires=[
         'Django>=2.0',
         'djangorestframework>=3.5.4',
-        'jsonfield>=2.0.0',
+        'jsonfield2>=3.0',
         'django-fsm==2.6.0',
         'six>=1.11.0',
         'python-dateutil',
