@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 import os
+from datetime import timedelta
 
-from dateutil import relativedelta
 from django.conf import settings as django_settings
 
 # Retrieve root settings dict
@@ -12,7 +12,7 @@ fallback_upload_dir = os.path.join(getattr(django_settings, 'BASE_DIR', '.'), 't
 
 # Retrieve settings
 TUS_UPLOAD_MODEL = REST_FRAMEWORK_TUS.get('UPLOAD_MODEL', 'rest_framework_tus.Upload')
-TUS_UPLOAD_EXPIRES = REST_FRAMEWORK_TUS.get('UPLOAD_EXPIRES', relativedelta.relativedelta(days=1))
+TUS_UPLOAD_EXPIRES = REST_FRAMEWORK_TUS.get('UPLOAD_EXPIRES', timedelta(days=1))
 TUS_UPLOAD_DIR = REST_FRAMEWORK_TUS.get('UPLOAD_DIR', fallback_upload_dir)
 TUS_RESPONSE_BODY_ENABLED = REST_FRAMEWORK_TUS.get('RESPONSE_BODY_ENABLED', False)
 TUS_SAVE_HANDLER_CLASS = \
